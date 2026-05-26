@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Judy Ann Necesario | Executive Assistant & Operations Portfolio</title>
 
-  <!-- Inter Font -->
+  <!-- Plus Jakarta Sans Font - Modern, Lively, and Crisp -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --text: #1f2937;        /* Deep charcoal */
-      --text-muted: #4b5563;  /* Medium gray */
-      --bg: #ffffff;          /* Pure White */
-      --light: #f9fafb;       /* Soft light gray background */
-      --light-accent: #f3f4f6;/* Slightly darker gray for card accents */
-      --accent: #2563eb;      /* Professional corporate blue */
-      --accent-hover: #1d4ed8;/* Deepened blue for interaction */
-      --border: #e5e7eb;      /* Clean card borders */
+      --text-dark: #0f172a;     /* Sophisticated dark slate */
+      --text-muted: #64748b;    /* Clean slate gray for readable body text */
+      --bg-white: #ffffff;      /* Crisp pure white contrast backgrounds */
+      --bg-warm: #fafaf9;       /* Cream/Warm sand white for elegant alternating sections */
+      --bg-card: #f8fafc;       /* Ultra-light gray for modern structured blocks */
+      --primary-indigo: #4338ca;/* Rich, modern Indigo - retains corporate authority */
+      --accent-coral: #f97316;  /* Lively, vibrant sunset orange/coral for energy accents */
+      --accent-hover: #ea580c;  /* Deep coral for active interaction click points */
+      --border-light: #e2e8f0;  /* Soft visual dividers */
     }
 
     * {
@@ -33,9 +34,9 @@
     }
 
     body {
-      font-family: "Inter", system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      background: var(--bg-white);
+      color: var(--text-dark);
       line-height: 1.6;
     }
 
@@ -46,32 +47,36 @@
 
     /* HEADER & NAV */
     header {
-      background: rgba(255, 255, 255, 0.95);
-      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border-light);
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(12px);
     }
 
     .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 0;
+      padding: 18px 0;
     }
 
     .logo {
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--text);
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--primary-indigo);
       text-decoration: none;
       letter-spacing: -0.5px;
     }
 
+    .logo span {
+      color: var(--accent-coral);
+    }
+
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 32px;
       list-style: none;
       align-items: center;
     }
@@ -79,40 +84,47 @@
     .nav-links a {
       text-decoration: none;
       color: var(--text-muted);
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.95rem;
-      transition: color 0.2s;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: var(--accent);
+      color: var(--primary-indigo);
     }
 
     /* HERO */
     .hero {
-      padding: 100px 0 80px;
+      padding: 130px 0 100px;
       text-align: center;
-      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      background: radial-gradient(100% 100% at 50% 0%, rgba(67, 56, 202, 0.05) 0%, rgba(255, 255, 255, 0) 100%), var(--bg-white);
     }
 
     .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
-      font-weight: 700;
+      font-size: clamp(2.4rem, 6vw, 3.75rem);
+      font-weight: 800;
       margin-bottom: 24px;
-      letter-spacing: -1.5px;
+      letter-spacing: -2px;
       line-height: 1.15;
-      color: #111827;
+      color: var(--text-dark);
+    }
+
+    .hero h1 span {
+      color: var(--primary-indigo);
+      position: relative;
+      display: inline-block;
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 680px;
       margin: auto;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       color: var(--text-muted);
+      font-weight: 400;
     }
 
     .hero-buttons {
-      margin-top: 40px;
+      margin-top: 45px;
       display: flex;
       justify-content: center;
       gap: 16px;
@@ -121,63 +133,64 @@
 
     /* BUTTONS */
     .btn {
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-weight: 600;
+      padding: 14px 30px;
+      border-radius: 50px; /* Playful rounded pill buttons */
+      font-weight: 700;
       font-size: 0.975rem;
       text-decoration: none;
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
       display: inline-block;
       border: none;
     }
 
     .btn-primary {
-      background: var(--accent);
-      color: white;
+      background: var(--accent-coral);
+      color: var(--bg-white);
     }
 
     .btn-primary:hover {
       background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
     }
 
     .btn-secondary {
-      background: var(--light-accent);
-      color: var(--text);
+      background: var(--bg-white);
+      color: var(--primary-indigo);
+      border: 2px solid var(--primary-indigo);
     }
 
     .btn-secondary:hover {
-      background: #e5e7eb;
-      transform: translateY(-2px);
+      background: rgba(67, 56, 202, 0.04);
+      transform: translateY(-3px);
     }
 
     /* SECTION LAYOUTS */
     section {
-      padding: 90px 0;
+      padding: 110px 0;
     }
 
-    .bg-light {
-      background: var(--light);
+    .bg-warm {
+      background: var(--bg-warm);
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
     }
 
     .section-title h2 {
-      font-size: 2.25rem;
-      margin-bottom: 14px;
-      font-weight: 700;
-      letter-spacing: -0.75px;
-      color: #111827;
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: var(--text-dark);
     }
 
     .section-title p {
       color: var(--text-muted);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       max-width: 600px;
       margin: auto;
     }
@@ -186,149 +199,175 @@
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
+      gap: 32px;
     }
 
     .card {
-      background: white;
-      padding: 40px 32px;
-      border-radius: 12px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid var(--border);
+      background: var(--bg-white);
+      padding: 45px 35px;
+      border-radius: 20px; /* Modern dynamic softened corners */
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary-indigo);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+      border-color: transparent;
+    }
+
+    .card:hover::before {
+      opacity: 1;
     }
 
     .card h3 {
-      margin-bottom: 14px;
-      font-size: 1.35rem;
-      font-weight: 600;
-      color: #111827;
+      margin-bottom: 16px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-dark);
     }
 
     .card p {
       color: var(--text-muted);
-      font-size: 0.975rem;
+      font-size: 1rem;
     }
 
     /* ABOUT SECTION */
     .about-layout {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      align-items: center;
       max-width: 900px;
       margin: auto;
     }
 
     .about-text p {
       color: var(--text-muted);
-      margin-bottom: 20px;
-      font-size: 1.05rem;
+      margin-bottom: 24px;
+      font-size: 1.1rem;
     }
 
     /* TIMELINE / EXPERIENCE */
     .timeline {
-      margin-top: 35px;
-      border-left: 2px solid var(--border);
-      padding-left: 20px;
+      margin-top: 45px;
+      border-left: 3px solid var(--border-light);
+      padding-left: 24px;
     }
 
     .timeline-item {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       position: relative;
     }
 
     .timeline-item::before {
       content: '';
       position: absolute;
-      left: -27px;
+      left: -33px;
       top: 6px;
-      background: var(--accent);
-      width: 12px;
-      height: 12px;
+      background: var(--accent-coral);
+      width: 14px;
+      height: 14px;
       border-radius: 50%;
+      box-shadow: 0 0 0 4px var(--bg-white);
     }
 
     .timeline-date {
       font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--accent);
+      font-weight: 700;
+      color: var(--accent-coral);
       text-transform: uppercase;
       margin-bottom: 4px;
+      letter-spacing: 0.5px;
     }
 
     .timeline-title {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 700;
-      color: #111827;
+      color: var(--text-dark);
     }
 
     .timeline-company {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: var(--text-muted);
       margin-bottom: 6px;
     }
 
-    /* TOOLS & INTEGRATIONS */
+    /* TOOLS & TAGS */
     .tools-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
     .tool-tag {
-      background: white;
-      border: 1px solid var(--border);
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-weight: 500;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 600;
       font-size: 0.9rem;
-      color: var(--text);
+      color: var(--text-dark);
+      transition: all 0.2s ease;
     }
 
-    /* CASE STUDIES WORK SAMPLES */
+    .tool-tag:hover {
+      background: var(--primary-indigo);
+      color: var(--bg-white);
+      border-color: transparent;
+    }
+
+    /* CASE STUDIES / WORK SAMPLES */
     .case-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
+      gap: 32px;
     }
 
     .case-card {
-      background: white;
-      padding: 35px 32px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
+      background: var(--bg-white);
+      padding: 40px 35px;
+      border-radius: 20px;
+      border: 1px solid var(--border-light);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: box-shadow 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .case-card:hover {
-      box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+      border-color: var(--primary-indigo);
+      box-shadow: 0 15px 35px rgba(67, 56, 202, 0.04);
     }
 
     .case-card h3 {
-      margin-bottom: 12px;
-      font-size: 1.25rem;
-      color: #111827;
+      margin-bottom: 14px;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      font-weight: 700;
     }
 
     .case-card p {
       color: var(--text-muted);
-      margin-bottom: 24px;
-      font-size: 0.975rem;
+      margin-bottom: 28px;
+      font-size: 1rem;
     }
 
     .btn-text {
-      color: var(--accent);
+      color: var(--primary-indigo);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.95rem;
       background: none;
       border: none;
@@ -337,44 +376,50 @@
       width: fit-content;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
+      transition: gap 0.2s ease;
     }
 
     .btn-text:hover {
-      color: var(--accent-hover);
+      color: var(--accent-coral);
+      gap: 10px;
     }
 
     /* TESTIMONIALS */
     .testimonial-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
+      gap: 32px;
     }
 
     .testimonial-card {
-      background: white;
-      padding: 35px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
+      background: var(--bg-white);
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.01);
     }
 
     .testimonial-quote {
       color: var(--text-muted);
       font-style: italic;
-      font-size: 0.975rem;
+      font-size: 1rem;
       margin-bottom: 24px;
       line-height: 1.7;
     }
 
     .author-meta h4 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #111827;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
     }
 
     .author-meta p {
       font-size: 0.85rem;
-      color: #6b7280;
+      color: var(--accent-coral);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     /* FAQ ACCORDION */
@@ -384,22 +429,27 @@
     }
 
     .faq-item {
-      background: white;
-      border: 1px solid var(--border);
-      margin-bottom: 12px;
-      border-radius: 8px;
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      margin-bottom: 14px;
+      border-radius: 12px;
       overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+
+    .faq-item:hover {
+      border-color: var(--primary-indigo);
     }
 
     .faq-trigger {
       width: 100%;
       background: none;
       border: none;
-      padding: 20px 24px;
+      padding: 22px 28px;
       text-align: left;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #111827;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-dark);
       cursor: pointer;
       display: flex;
       justify-content: space-between;
@@ -408,27 +458,28 @@
 
     .faq-trigger::after {
       content: '+';
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: var(--text-muted);
-      font-weight: 400;
-      transition: transform 0.2s ease;
+      font-weight: 500;
+      transition: transform 0.2s ease, color 0.2s ease;
     }
 
     .faq-item.active .faq-trigger::after {
       transform: rotate(45deg);
+      color: var(--accent-coral);
     }
 
     .faq-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease-out;
-      padding: 0 24px;
+      transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 0 28px;
     }
 
     .faq-content p {
-      padding-bottom: 20px;
+      padding-bottom: 22px;
       color: var(--text-muted);
-      font-size: 0.975rem;
+      font-size: 1rem;
     }
 
     /* DETAILS MODAL OVERLAY */
@@ -438,16 +489,16 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(17, 24, 39, 0.4);
+      background: rgba(15, 23, 42, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.25s ease;
+      transition: opacity 0.3s ease;
       z-index: 1000;
       padding: 20px;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(6px);
     }
 
     .modal.active {
@@ -456,15 +507,15 @@
     }
 
     .modal-content {
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
+      background: var(--bg-white);
+      padding: 45px;
+      border-radius: 24px;
       max-width: 600px;
       width: 100%;
       position: relative;
-      transform: translateY(15px);
-      transition: transform 0.25s ease;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      transform: translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
     }
 
     .modal.active .modal-content {
@@ -473,12 +524,12 @@
 
     .close-modal {
       position: absolute;
-      top: 20px;
-      right: 20px;
-      background: var(--light-accent);
+      top: 24px;
+      right: 24px;
+      background: var(--bg-card);
       border: none;
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       font-weight: bold;
       cursor: pointer;
@@ -486,66 +537,74 @@
       align-items: center;
       justify-content: center;
       color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .close-modal:hover {
+      background: var(--accent-coral);
+      color: var(--bg-white);
     }
 
     .modal-content h3 {
-      margin-bottom: 16px;
-      font-size: 1.4rem;
+      margin-bottom: 18px;
+      font-size: 1.5rem;
       letter-spacing: -0.5px;
-      color: #111827;
+      color: var(--primary-indigo);
     }
 
     .modal-content h4 {
-      margin: 18px 0 6px;
-      font-size: 1.05rem;
-      color: #374151;
+      margin: 20px 0 8px;
+      font-size: 1.1rem;
+      color: var(--text-dark);
     }
 
     .modal-content ul {
-      padding-left: 20px;
+      padding-left: 22px;
     }
 
     .modal-content li {
       color: var(--text-muted);
-      margin-bottom: 6px;
-      font-size: 0.975rem;
+      margin-bottom: 8px;
+      font-size: 1rem;
     }
 
     /* CTA */
     .cta {
       text-align: center;
-      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-      border-top: 1px solid var(--border);
+      background: radial-gradient(100% 100% at 50% 100%, rgba(249, 115, 22, 0.04) 0%, rgba(255, 255, 255, 0) 100%), var(--bg-white);
+      border-top: 1px solid var(--border-light);
     }
 
     .cta h2 {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
-      font-weight: 700;
+      font-size: 2.6rem;
+      margin-bottom: 18px;
+      font-weight: 800;
       letter-spacing: -1px;
+      color: var(--text-dark);
     }
 
     .cta p {
       max-width: 600px;
-      margin: auto auto 35px;
+      margin: auto auto 40px;
       color: var(--text-muted);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
     }
 
     /* FOOTER */
     footer {
-      padding: 40px 0;
+      padding: 45px 0;
       text-align: center;
-      font-size: 0.9rem;
-      color: #9ca3af;
-      border-top: 1px solid var(--border);
-      background: white;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-light);
+      background: var(--bg-white);
+      font-weight: 500;
     }
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .hero { padding: 70px 0 50px; }
-      section { padding: 65px 0; }
+      .hero { padding: 90px 0 70px; }
+      section { padding: 80px 0; }
     }
   </style>
 </head>
@@ -554,22 +613,22 @@
   <!-- HEADER / NAVIGATION -->
   <header>
     <div class="container nav-container">
-      <a href="#" class="logo">Judy Ann Necesario</a>
+      <a href="#" class="logo">Judy Ann<span>.</span></a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
-        <li><a href="#about">About & Experience</a></li>
+        <li><a href="#about">Experience</a></li>
         <li><a href="#case-studies">Work Samples</a></li>
         <li><a href="#testimonials">Endorsements</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a href="https://calendly.com/d/ct7p-f5f-6nx" target="_blank" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem; border-radius: 6px;">Book a Call</a>
+      <a href="https://calendly.com/d/ct7p-f5f-6nx" target="_blank" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.9rem;">Book Call</a>
     </div>
   </header>
 
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
-      <h1>High-Level Executive Support & Operations Partner</h1>
+      <h1>High-Level Executive Support & <span>Operations Partner</span></h1>
       <p>
         Optimizing administrative systems, managing executive workloads, and aligning client operations 
         so scaling businesses and corporate leaders can operate with total clarity.
@@ -582,7 +641,7 @@
   </section>
 
   <!-- CORE SERVICES SECTION -->
-  <section class="services bg-light" id="services">
+  <section class="services bg-warm" id="services">
     <div class="container">
       <div class="section-title">
         <h2>Core Services</h2>
@@ -622,7 +681,7 @@
     <div class="container">
       <div class="about-layout">
         <div class="about-text">
-          <div class="section-title" style="text-align: left; margin-bottom: 25px;">
+          <div class="section-title" style="text-align: left; margin-bottom: 30px;">
             <h2>Professional Background</h2>
           </div>
           <p>
@@ -636,7 +695,7 @@
             and focused on long-term project stability.
           </p>
           
-          <h3 style="font-size: 1.1rem; margin-top: 30px; margin-bottom: 15px; font-weight: 700; color: #111827;">Core Tool Ecosystems:</h3>
+          <h3 style="font-size: 1.1rem; margin-top: 35px; margin-bottom: 15px; font-weight: 700; color: var(--text-dark);">Core Tool Ecosystems:</h3>
           <div class="tools-grid">
             <span class="tool-tag">Asana / Notion / Trello</span>
             <span class="tool-tag">Google Workspace & MS 365</span>
@@ -645,7 +704,7 @@
             <span class="tool-tag">Slack / Corporate Communications</span>
           </div>
 
-          <h3 style="font-size: 1.1rem; margin-top: 40px; margin-bottom: 15px; font-weight: 700; color: #111827;">Career Timeline:</h3>
+          <h3 style="font-size: 1.1rem; margin-top: 45px; margin-bottom: 15px; font-weight: 700; color: var(--text-dark);">Career Timeline:</h3>
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-date">Oct 2025 - May 2026</div>
@@ -669,7 +728,7 @@
   </section>
 
   <!-- WORK SAMPLES SECTION -->
-  <section class="case-studies bg-light" id="case-studies">
+  <section class="case-studies bg-warm" id="case-studies">
     <div class="container">
       <div class="section-title">
         <h2>Mock Work Samples</h2>
@@ -762,7 +821,7 @@
   </section>
 
   <!-- FAQ SECTION -->
-  <section class="faq bg-light" id="faq">
+  <section class="faq bg-warm" id="faq">
     <div class="container">
       <div class="section-title">
         <h2>Frequently Asked Questions</h2>
